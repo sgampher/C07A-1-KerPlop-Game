@@ -7,7 +7,7 @@ import java.util.Random;
 public class Skeleton extends RandomMotionPiece {	
 	
 	public Skeleton(char symbol, String label, int location) {
-		super('S', "Skeleton", 5);
+		super('S', "Skeleton", 18);
 	}
 
 	//kills player within 3 blocks, but if special move is true, kills player within 5 blocks

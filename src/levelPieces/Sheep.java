@@ -7,7 +7,7 @@ public class Sheep extends GamePiece {
 	
 	
 	public Sheep(char symbol, String label, int location) {
-		super(symbol, label, location);
+		super(symbol, label, 8);
 	}
 
 	

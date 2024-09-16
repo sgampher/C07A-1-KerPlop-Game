@@ -12,9 +12,6 @@ public class Sheep extends GamePiece {
 
 	
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		if (this.getLocation() == playerLocation) {
-			return InteractionResult.NONE;
-		}
 			return InteractionResult.NONE;
 	}
 	

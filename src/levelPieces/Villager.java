@@ -4,9 +4,7 @@ import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
 public class Villager extends GamePiece {
-	
-	Drawable villager;
-	
+		
 	public Villager(char symbol, String label, int location) {
 		super(symbol, label, location);
 	}
@@ -16,7 +14,6 @@ public class Villager extends GamePiece {
 		if (playerLocation == this.getLocation()) {
 			return InteractionResult.ADVANCE;
 		}
-		
 		return InteractionResult.NONE;
 	}
 }

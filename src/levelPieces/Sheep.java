@@ -3,7 +3,7 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class Sheep extends GamePiece {
+public class Sheep extends RandomMotionPiece {
 	
 	
 	public Sheep(char symbol, String label, int location) {

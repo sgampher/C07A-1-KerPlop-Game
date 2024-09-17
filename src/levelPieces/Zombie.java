@@ -5,7 +5,7 @@ import gameEngine.InteractionResult;
 public class Zombie extends RandomMotionPiece {
 	
 	public Zombie(char symbol, String label, int location) {
-		super('Z', "Zombie", 2);
+		super(symbol, label, location);
 	}
 	
 	public InteractionResult interact(Drawable[] board, int playerLocation) {

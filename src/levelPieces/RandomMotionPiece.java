@@ -16,12 +16,12 @@ public abstract class RandomMotionPiece extends GamePiece implements Moveable {
 	
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		Random rand = new Random();
-		int newLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+		int newLocation = rand.nextInt(GameEngine.BOARD_SIZE + 1);
 		
 		//Randomly probe locations on the board until an empty one is found,
 		//there should always be an empty spot on board
 		while (gameBoard[newLocation] != null) {			
-			newLocation = rand.nextInt(GameEngine.BOARD_SIZE);
+			newLocation = rand.nextInt(GameEngine.BOARD_SIZE + 1);
 		}
 		
 		gameBoard[newLocation] = randomPiece;

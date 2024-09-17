@@ -7,13 +7,12 @@ public class Sheep extends GamePiece {
 	
 	
 	public Sheep(char symbol, String label, int location) {
-		super(symbol, label, 8);
+		super(symbol, label, location);
 	}
 
 	
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 			return InteractionResult.NONE;
 	}
-	
-	
+		
 }

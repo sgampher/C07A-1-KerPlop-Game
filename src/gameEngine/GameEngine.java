@@ -36,7 +36,7 @@ public class GameEngine {
 	// or null for empty
 	private Drawable[] gameBoard;
 	// Only some pieces can move.
-	private ArrayList<Moveable> movingPieces;
+	private ArrayList<GamePiece> movingPieces;
 	// Only game pieces interact
 	private ArrayList<GamePiece> interactingPieces;
 	// Player keeps track of player status and controls player movement/location

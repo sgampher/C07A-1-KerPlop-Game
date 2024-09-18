@@ -23,6 +23,8 @@ public class LevelSetup {
 	private Creeper Creeper;
 	private GamePiece winner;
 	
+	public static boolean level2;
+	
 	public LevelSetup() {
 		
 		//Initializes game board, moving pieces, and interacting pieces
@@ -51,6 +53,8 @@ public class LevelSetup {
 	public void createLevel(int levelNum) {
 
 		if (levelNum == 1) {
+			
+			level2 = false;
 			
 			//level 1 starting locations
 			PlayerStartingLocation = 10;
@@ -88,6 +92,8 @@ public class LevelSetup {
 			
 			
 		} else if (levelNum == 2) {
+			
+			level2 = true;
 			
 			//level 2 starting locations
 			PlayerStartingLocation = 10;

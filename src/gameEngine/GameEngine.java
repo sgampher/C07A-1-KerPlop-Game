@@ -3,7 +3,6 @@ package gameEngine;
 import java.util.ArrayList;
 
 import levelPieces.GamePiece;
-import levelPieces.LevelSetup;
 
 /**
  * Framework for LevelGame.

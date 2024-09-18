@@ -1,5 +1,6 @@
 package gameEngine;
 import java.util.ArrayList;
+import java.util.Random;
 import levelPieces.GamePiece;
 import levelPieces.Sheep;
 import levelPieces.Skeleton;
@@ -13,7 +14,6 @@ public class LevelSetup {
 	private Drawable[] gameBoard;
 	private ArrayList<Moveable> movingPieces;
 	private ArrayList<GamePiece> interactingPieces;
-	
 	private int PlayerStartingLocation;
 	private Zombie Zombie;
 	private GamePiece villager;
@@ -22,15 +22,11 @@ public class LevelSetup {
 	private GamePiece winner;
 	
 	public LevelSetup() {
+		
+		//Initializes game board, moving pieces, and interacting pieces
 		gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		movingPieces = new ArrayList<Moveable>();
 		interactingPieces = new ArrayList<GamePiece>();
-		PlayerStartingLocation = 8;
-		Zombie = new Zombie('Z', "Zombie", 4);
-		villager = new Villager('V', "Villager", 12);
-		Sheep = new Sheep('O', "Sheep", 20);
-		Skeleton = new Skeleton('S', "Skeleton", 16);
-		winner = new Win('W', "Win", 0);
 	}
 	
 	public int getPlayerStartLoc() {
@@ -51,25 +47,77 @@ public class LevelSetup {
 	}
 
 	public void createLevel(int levelNum) {
-		//Adding moving pieces
-		movingPieces.add(Zombie);
-		movingPieces.add(Skeleton);
-		movingPieces.add(Sheep);
-		
-		//Adding interacting pieces
-		interactingPieces.add(Zombie);
-		interactingPieces.add(Skeleton);
-		interactingPieces.add(Sheep);
-		interactingPieces.add(villager);
-		interactingPieces.add(winner);
-		
-		//Adding gameboard pieces
-		gameBoard[villager.getLocation()] = villager;
-		gameBoard[winner.getLocation()] = winner;
-		gameBoard[Zombie.getLocation()] = Zombie;
-		gameBoard[Skeleton.getLocation()] = Skeleton;
-		gameBoard[Sheep.getLocation()] = Sheep;
-		gameBoard[15] = new Sniffer();
+
+		if (levelNum == 1) {
+			
+			PlayerStartingLocation = 10;
+			Zombie = new Zombie('Z', "Zombie", 0);
+			villager = new Villager('V', "Villager", 14);
+			Sheep = new Sheep('O', "Sheep", 18);
+			Skeleton = new Skeleton('S', "Skeleton", 20);
+			winner = new Win('W', "Win", 14);
+			
+			
+			//Adding moving pieces
+			movingPieces.add(Zombie);
+			movingPieces.add(Skeleton);
+			movingPieces.add(Sheep);
+			
+			//Adding interacting pieces
+			interactingPieces.add(Zombie);
+			interactingPieces.add(Skeleton);
+			interactingPieces.add(Sheep);
+			interactingPieces.add(villager);
+			interactingPieces.add(winner);
+			
+			
+			//Adding gameboard pieces
+			gameBoard[villager.getLocation()] = villager;
+			gameBoard[winner.getLocation()] = winner;
+			gameBoard[Zombie.getLocation()] = Zombie;
+			gameBoard[Skeleton.getLocation()] = Skeleton;
+			gameBoard[Sheep.getLocation()] = Sheep;
+			gameBoard[15] = new Sniffer();		
+			
+			
+		} else if (levelNum == 2) {
+			
+			PlayerStartingLocation = 10;
+			Zombie = new Zombie('Z', "Zombie", 8);
+			villager = new Villager('V', "Villager", 4);
+			Sheep = new Sheep('O', "Sheep", 12);
+			Skeleton = new Skeleton('S', "Skeleton", 18);
+			winner = new Win('W', "Win", 16);
+			
+			
+			//clear previous arraylist contents
+			movingPieces.clear();
+			interactingPieces.clear();
+			
+			for (int i = 0; i < GameEngine.BOARD_SIZE; i++) {
+				gameBoard[i] = null;
+			}
+			
+			//Adding moving pieces
+			movingPieces.add(Zombie);
+			movingPieces.add(Skeleton);
+			movingPieces.add(Sheep);
+			
+			//Adding interacting pieces
+			interactingPieces.add(Zombie);
+			interactingPieces.add(Skeleton);
+			interactingPieces.add(Sheep);
+			interactingPieces.add(villager);
+			interactingPieces.add(winner);
+			
+			
+			//Adding gameboard pieces
+			gameBoard[villager.getLocation()] = villager;
+			gameBoard[winner.getLocation()] = winner;
+			gameBoard[Zombie.getLocation()] = Zombie;
+			gameBoard[Skeleton.getLocation()] = Skeleton;
+			gameBoard[Sheep.getLocation()] = Sheep;
+			gameBoard[15] = new Sniffer();		
+		}
 	}
-	
 }

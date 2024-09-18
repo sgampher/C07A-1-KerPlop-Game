@@ -10,13 +10,13 @@ public class Skeleton extends RandomMotionPiece {
 		super(symbol, label, location);
 	}
 
-	//kills player within 3 blocks, but if special move is true, kills player within 5 blocks
+	//kills player within 2 blocks, but if special move is true, kills player within 3 blocks
 	public InteractionResult interact(Drawable[] board, int playerLocation) {
 		Random rand = new Random();
 		boolean SpecialMove = rand.nextBoolean();
 		System.out.println("SPECIAL SKELETON MOVE ACTIVE!");
 		
-		if ( (playerLocation >= this.getLocation() - 3 || playerLocation <= this.getLocation() + 3) || (SpecialMove && (playerLocation >= this.getLocation() - 5 || playerLocation <= this.getLocation() + 5))) {
+		if (((Math.abs(playerLocation - this.getLocation()) <= 2) && !SpecialMove) || ((Math.abs(playerLocation - this.getLocation()) <= 3) && SpecialMove)) {
 			return InteractionResult.HIT;
 		} else {
 			return InteractionResult.NONE;

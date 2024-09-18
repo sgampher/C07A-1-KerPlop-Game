@@ -1,17 +1,18 @@
-Sheep:
+Sheep (O):
 	Advances the player. Moves randomly.
 
-Villager:
+Villager (V):
 	Does nothing. Doesn't move.
 
-Win:
+Win (W):
 	When player is on its square, it gives a point to the player. Doesn't move.
 
-Zombie:
+Zombie (Z):
 	Attacks when players are next to it. Instantly kills the player. Moves linearly.
 
-Skeleton:
-	Attacks at a range of three blocks normally, but when its special move is active, it can attack at a range of up to five blocks.
+Skeleton (S):
+	Attacks at a range of 2 blocks normally, but when its special move is active, it can attack at a range of up to 3 blocks.
 	Doesn't automatically kill the player, but detoriates its health with hits.
-
 	
+Sniffer (--O):
+	Sniffs things.

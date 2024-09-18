@@ -7,29 +7,33 @@ import gameEngine.Moveable;
 public abstract class LinearMotionPiece extends GamePiece implements Moveable {
 
 	private static boolean MOVELEFT = false;
-	private Drawable LinearMotionPiece;
 	
 	public LinearMotionPiece(char symbol, String label, int location) {
 		super(symbol, label, location);
 	}
 	
-	//if we encounter another piece, move again
+	
 	public void move(Drawable[] gameBoard, int playerLocation) {
+		//reset the old position
+		gameBoard[this.getLocation()] = null;
 		moveHelper();
+		
+		//if we encounter another piece, move again
+		//There should always be an empty location on the board
 		while (gameBoard[this.getLocation()] != null) {
 			moveHelper();
 		}
 		
-		gameBoard[this.getLocation()] = LinearMotionPiece;
+		gameBoard[this.getLocation()] = this;
 	}
 	
 	//moves pieces linearly
 	private void moveHelper() {
-		if (this.getLocation() > 0 && this.getLocation() < GameEngine.BOARD_SIZE && !MOVELEFT) {
+		if (this.getLocation() >= 0 && this.getLocation() < GameEngine.BOARD_SIZE && !MOVELEFT) {
 			
 			this.setLocation(this.getLocation() + 1);
 			
-			if(this.getLocation() == GameEngine.BOARD_SIZE) {
+			if(this.getLocation() == GameEngine.BOARD_SIZE - 1) {
 				MOVELEFT = true;
 			}
 			

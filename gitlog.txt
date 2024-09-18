@@ -1,0 +1,75 @@
+commit e82f1d0988b9a728edde24abcf6cecbfc7c2449c
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Wed Sep 18 01:08:33 2024 -0600
+
+    Add Creeper (we need 7 charecters)
+    Update UML and txt file
+
+commit 116c5fdc6f4a7cb0549773292c148534c9b8c6ac
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Wed Sep 18 00:44:00 2024 -0600
+
+    Added gitlog
+    Made sure all documents are correctly named
+
+commit f5edfc5a71989730e0135fbfad3f55d459e63210
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Wed Sep 18 00:35:56 2024 -0600
+
+    Add LevelSetup with levels 1 and 2
+    Add starting positions
+    Add neccessary comments
+    Fix Bug out of bounds with LinearMotionPiece
+    Fix Bug out of bounds with RandomMotionPiece
+    Fix Bug where skeleton and zombie hit out of range
+    Fix Zombie inheritance with LinearMotionPiece
+    Fix collision avoidance
+
+commit f06497998f315fd5270f7c481d2c04669c0d0daf
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Mon Sep 16 22:02:23 2024 -0600
+
+    added UML diagram
+
+commit a9b268962f5827497110756af1bbd69ec40ed16e
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Mon Sep 16 21:56:56 2024 -0600
+
+    Finished levels
+
+commit f2c5e2b7ba42e58ac1905d349da015979ef31658
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Mon Sep 16 20:35:41 2024 -0600
+
+    Added textfile. Started on LevelSetup
+
+commit 86e507bc28b20eac49db10730c9c1e26a49e110c
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Mon Sep 16 15:17:22 2024 -0600
+
+    Edited starting positions
+
+commit 46351385c241d29b895f84fb8da9b28e5c1a5251
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Mon Sep 16 14:51:16 2024 -0600
+
+    Revised Villager and Sheep
+
+commit 2cb8b3b2e04b6d01ff0be0761f101ede2e64160b
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Mon Sep 16 14:36:02 2024 -0600
+
+    Initial commit, make all charecters with help of
+    Sara Gampher
+
+commit 06eaca67a5acca24bb32aff87d11738a784d7491
+Author: sgampher <saragampher@gmail.com>
+Date:   Mon Sep 16 03:27:39 2024 -0600
+
+    Add .gitignore
+
+commit c6fe9f397a7bc291a83bb4b702f3bbf6cc0ca986
+Author: sgampher <saragampher@gmail.com>
+Date:   Mon Sep 16 03:24:17 2024 -0600
+
+    Initial commit

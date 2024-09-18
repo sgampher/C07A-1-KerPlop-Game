@@ -50,6 +50,7 @@ public class LevelSetup {
 
 		if (levelNum == 1) {
 			
+			//level 1 starting locations
 			PlayerStartingLocation = 10;
 			Zombie = new Zombie('Z', "Zombie", 0);
 			villager = new Villager('V', "Villager", 14);
@@ -82,6 +83,7 @@ public class LevelSetup {
 			
 		} else if (levelNum == 2) {
 			
+			//level 2 starting locations
 			PlayerStartingLocation = 10;
 			Zombie = new Zombie('Z', "Zombie", 8);
 			villager = new Villager('V', "Villager", 4);

@@ -15,4 +15,4 @@ Skeleton (S):
 	Doesn't automatically kill the player, but detoriates its health with hits.
 	
 Sniffer (--O):
-	Sniffs things.
+	Does nothing.

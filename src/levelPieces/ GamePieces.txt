@@ -16,3 +16,7 @@ Skeleton (S):
 	
 Sniffer (--O):
 	Does nothing.
+	
+Creeper (C):
+	Attacks at a range of 5 blocks every three moves. Moves linearly
+	

@@ -7,6 +7,7 @@ import levelPieces.Skeleton;
 import levelPieces.Sniffer;
 import levelPieces.Villager;
 import levelPieces.Win;
+import levelPieces.Creeper;
 import levelPieces.Zombie;
 
 public class LevelSetup {
@@ -19,6 +20,7 @@ public class LevelSetup {
 	private GamePiece villager;
 	private Sheep Sheep;
 	private Skeleton Skeleton;
+	private Creeper Creeper;
 	private GamePiece winner;
 	
 	public LevelSetup() {
@@ -56,6 +58,7 @@ public class LevelSetup {
 			villager = new Villager('V', "Villager", 14);
 			Sheep = new Sheep('O', "Sheep", 18);
 			Skeleton = new Skeleton('S', "Skeleton", 20);
+			Creeper = new Creeper('C', "Creeper", 2);
 			winner = new Win('W', "Win", 14);
 			
 			
@@ -63,6 +66,7 @@ public class LevelSetup {
 			movingPieces.add(Zombie);
 			movingPieces.add(Skeleton);
 			movingPieces.add(Sheep);
+			movingPieces.add(Creeper);
 			
 			//Adding interacting pieces
 			interactingPieces.add(Zombie);
@@ -70,6 +74,7 @@ public class LevelSetup {
 			interactingPieces.add(Sheep);
 			interactingPieces.add(villager);
 			interactingPieces.add(winner);
+			interactingPieces.add(Creeper);
 			
 			
 			//Adding gameboard pieces
@@ -77,6 +82,7 @@ public class LevelSetup {
 			gameBoard[winner.getLocation()] = winner;
 			gameBoard[Zombie.getLocation()] = Zombie;
 			gameBoard[Skeleton.getLocation()] = Skeleton;
+			gameBoard[Creeper.getLocation()] = Creeper;
 			gameBoard[Sheep.getLocation()] = Sheep;
 			gameBoard[15] = new Sniffer();		
 			
@@ -87,6 +93,7 @@ public class LevelSetup {
 			PlayerStartingLocation = 10;
 			Zombie = new Zombie('Z', "Zombie", 8);
 			villager = new Villager('V', "Villager", 4);
+			Creeper = new Creeper('C', "Creeper", 6);
 			Sheep = new Sheep('O', "Sheep", 12);
 			Skeleton = new Skeleton('S', "Skeleton", 18);
 			winner = new Win('W', "Win", 16);
@@ -104,10 +111,12 @@ public class LevelSetup {
 			movingPieces.add(Zombie);
 			movingPieces.add(Skeleton);
 			movingPieces.add(Sheep);
+			movingPieces.add(Creeper);
 			
 			//Adding interacting pieces
 			interactingPieces.add(Zombie);
 			interactingPieces.add(Skeleton);
+			interactingPieces.add(Creeper);
 			interactingPieces.add(Sheep);
 			interactingPieces.add(villager);
 			interactingPieces.add(winner);
@@ -118,6 +127,7 @@ public class LevelSetup {
 			gameBoard[winner.getLocation()] = winner;
 			gameBoard[Zombie.getLocation()] = Zombie;
 			gameBoard[Skeleton.getLocation()] = Skeleton;
+			gameBoard[Creeper.getLocation()] = Creeper;
 			gameBoard[Sheep.getLocation()] = Sheep;
 			gameBoard[15] = new Sniffer();		
 		}

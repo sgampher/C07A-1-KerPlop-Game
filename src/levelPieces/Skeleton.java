@@ -14,7 +14,8 @@ public class Skeleton extends RandomMotionPiece {
 	public InteractionResult interact(Drawable[] board, int playerLocation) {
 		Random rand = new Random();
 		boolean SpecialMove = rand.nextBoolean();
-		System.out.println("SPECIAL SKELETON MOVE ACTIVE!");
+		
+		if (SpecialMove) System.out.println("SPECIAL SKELETON MOVE ACTIVE!");
 		
 		if (((Math.abs(playerLocation - this.getLocation()) <= 2) && !SpecialMove) || ((Math.abs(playerLocation - this.getLocation()) <= 3) && SpecialMove)) {
 			return InteractionResult.HIT;

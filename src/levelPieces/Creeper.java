@@ -5,7 +5,7 @@ import gameEngine.LevelSetup;
 
 public class Creeper extends LinearMotionPiece {
 	
-	private static int TIME_TO_BLOW = 2;
+	public static int TIME_TO_BLOW = 2;
 
 	public Creeper(char symbol, String label, int location) {
 		super(symbol, label, location);
@@ -41,5 +41,5 @@ public class Creeper extends LinearMotionPiece {
 		} else {
 			return InteractionResult.NONE;
 		}
-	}		
+	}
 }

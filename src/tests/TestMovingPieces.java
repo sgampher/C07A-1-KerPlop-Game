@@ -16,7 +16,7 @@ class TestMovingPieces {
 	 * by random mmovement.
 	 */
 	@Test
-	void TestRandomMovement() {
+	public void TestRandomMovement() {
 		
 	    Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 	    int countSkeletonBefore=0;
@@ -66,10 +66,10 @@ class TestMovingPieces {
 	 * If the amount of both Creepers and Zombies remain the same before and after calling move,
 	 * no null spaces are detected, and some other objects aren't occupying any indeces, success, 
 	 * fail otherwise. This can all serve the purpose of ensuring all spaces on the board can be occupies
-	 * by linear movement
+	 * by linear movement. 
 	 */
 	@Test
-	void TestLinearMovement() {
+	public void TestLinearMovement() {
 		
 		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 	    int countCreeperBefore=0;
@@ -110,7 +110,7 @@ class TestMovingPieces {
 	    
 	    //tests if the creeper/zombie count before calling move is equal to the creeper/zombie count after calling move
 	    assertEquals(countCreeperBefore, countCreeperAfter);
-	    assertEquals(countZombieBefore, countZombieAfter);
+	    assertEquals(countZombieBefore, countZombieAfter);d
 		
 	}
 

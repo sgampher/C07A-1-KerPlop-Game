@@ -10,7 +10,7 @@ public class Sheep extends RandomMotionPiece {
 		super(symbol, label, location);
 	}
 
-	
+
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 			return InteractionResult.NONE;
 	}
